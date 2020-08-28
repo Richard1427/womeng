@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="627.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+   <children>
+      <TableView fx:id="menuTableView" layoutX="31.0" layoutY="73.0" prefHeight="312.0" prefWidth="452.0">
+        <columns>
+            <TableColumn fx:id="menuIdTableColumn" prefWidth="118.0" text="菜品编号" />
+          <TableColumn fx:id="menuNameTableColumn" prefWidth="235.0" text="菜品" />
+          <TableColumn fx:id="menuPriceTableColumn" minWidth="0.0" prefWidth="95.0" text="单价" />
+        </columns>
+      </TableView>
+      <Button fx:id="addChartButton" disable="true" layoutX="214.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedAddChartButton" text="添加到购物车" />
+      <TableView fx:id="shopTableView" layoutX="506.0" layoutY="73.0" prefHeight="312.0" prefWidth="452.0">
+         <columns>
+            <TableColumn fx:id="shopIdTableColumn" prefWidth="118.0" text="菜品编号" />
+            <TableColumn fx:id="shopNameTableColumn" prefWidth="235.0" text="菜品" />
+            <TableColumn fx:id="shopCountTableColumn" minWidth="0.0" prefWidth="95.0" text="份数" />
+         </columns>
+      </TableView>
+      <Button fx:id="removeButton" disable="true" layoutX="623.0" layoutY="473.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedRemoveButton" text="移除" />
+      <Button fx:id="payButton" disable="true" layoutX="745.0" layoutY="473.0"  onMouseClicked="#onMouseClickedPayButton"  mnemonicParsing="false" text="结算" />
+   </children>
+</AnchorPane>

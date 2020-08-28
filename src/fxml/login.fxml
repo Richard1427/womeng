@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?fxml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Button fx:id="loginButton" disable="true" layoutX="152.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedLoginButton" text="登录" />
+      <Button fx:id="registerButton" layoutX="308.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedRegisterButton" text="注册" />
+      <TextField fx:id="usernameTextField" layoutX="207.0" layoutY="94.0" />
+      <PasswordField fx:id="passwordPasswordField" layoutX="207.0" layoutY="146.0" />
+      <Label layoutX="80.0" layoutY="94.0" text="用户名" />
+      <Label layoutX="81.0" layoutY="164.0" text="密码" />
+      <RadioButton fx:id="userRadioButton" layoutX="188.0" layoutY="212.0" mnemonicParsing="false" selected="true" text="用户">
+         <toggleGroup>
+            <ToggleGroup fx:id="roleToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="managerRadioButton" layoutX="328.0" layoutY="212.0" mnemonicParsing="false" text="管理员" toggleGroup="$roleToggleGroup" />
+      <Label layoutX="261.0" layoutY="319.0" text="未有用户名？点击注册吧！" textFill="#0725ab">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="40.0" text="在线订餐系统">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

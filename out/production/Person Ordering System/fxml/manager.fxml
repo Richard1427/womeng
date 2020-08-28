@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="所有菜品">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="menuTableView" layoutX="65.0" layoutY="30.0" prefHeight="281.0" prefWidth="471.0">
+                          <columns>
+                            <TableColumn fx:id="menuIdTableColumn" prefWidth="150.0" text="菜品编号" />
+                            <TableColumn fx:id="menuNameTableColumn" minWidth="0.0" prefWidth="210.0" text="菜品" />
+                              <TableColumn fx:id="menuPriceTableColumn" prefWidth="110.0" text="单价" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="removeMenuButton" disable="true" layoutX="287.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedRemoveMenuButton" text="删除" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="添加菜品">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="addMenuNameTextField" layoutX="157.0" layoutY="96.0" />
+                        <TextField fx:id="addMenuPriceTextField" layoutX="157.0" layoutY="166.0" />
+                        <Button fx:id="addMenuButton" disable="true" layoutX="157.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedAddMenuButton" text="添加菜品" />
+                        <Label layoutX="60.0" layoutY="96.0" text="菜品：" />
+                        <Label layoutX="60.0" layoutY="166.0" text="单价：" />
+                        <Label fx:id="addMenuTipsLabel" layoutX="173.0" layoutY="307.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
